@@ -1,0 +1,16 @@
+﻿latitude,longitude,risk_level,description
+41.015137,28.97953,high,İstanbul Eminönü - Son 6 ayda 20 kaza
+41.00824,28.978359,medium,İstanbul Sultanahmet Meydanı - Son 6 ayda 8 kaza
+41.032799,28.976718,low,İstanbul Beşiktaş Meydanı - Son 6 ayda 4 kaza
+39.925533,32.866287,high,Ankara Kızılay - Son 6 ayda 18 kaza
+39.933365,32.859741,medium,Ankara Ulus Meydanı - Son 6 ayda 7 kaza
+39.93907,32.853157,low,Ankara Sıhhiye - Son 6 ayda 3 kaza
+38.423733,27.142826,high,İzmir Konak Meydanı - Son 6 ayda 15 kaza
+38.41925,27.128723,medium,İzmir Alsancak - Son 6 ayda 6 kaza
+38.429996,27.13636,low,İzmir Karşıyaka - Son 6 ayda 2 kaza
+40.195278,29.060556,high,Bursa Heykel Meydanı - Son 6 ayda 14 kaza
+40.18257,29.06687,medium,Bursa Altıparmak - Son 6 ayda 6 kaza
+40.20316,29.04442,low,Bursa Osmangazi - Son 6 ayda 3 kaza
+36.896893,30.713324,high,Antalya Kaleiçi - Son 6 ayda 12 kaza
+36.88414,30.70563,medium,Antalya Konyaaltı - Son 6 ayda 5 kaza
+36.898193,30.639107,low,Antalya Muratpaşa - Son 6 ayda 2 kaza
