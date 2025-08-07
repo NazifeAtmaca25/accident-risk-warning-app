@@ -1,0 +1,109 @@
+city,district,latitude,longitude,number_of_accidents,risk_level,description,duration
+Edirne,Keşan,40.8556,26.6308,680,low,Son 1 yılda düşük kaza oranı,1 year
+Elazığ,Kovancılar,38.7222,39.8667,840,low,Son 1 yılda düşük kaza oranı,1 year
+Erzurum,Palandöken,39.9,41.3,840,low,Son 1 yılda düşük kaza oranı,1 year
+Tekirdağ,Süleymanpaşa,40.978,27.511,1750,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Çanakkale,Merkez,40.1553,26.4142,900,low,Son 1 yılda düşük kaza oranı,1 year
+Uşak,Merkez,38.6823,29.4082,900,low,Son 1 yılda düşük kaza oranı,1 year
+Zonguldak,Merkez,41.4514,31.7931,960,low,Son 1 yılda düşük kaza oranı,1 year
+Osmaniye,Merkez,37.0742,36.2478,900,low,Son 1 yılda düşük kaza oranı,1 year
+Niğde,Bor,37.8833,34.5667,560,low,Son 1 yılda düşük kaza oranı,1 year
+Van,İpekyolu,38.4946,43.3833,1800,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırklareli,Lüleburgaz,41.4069,27.3553,360,low,Son 1 yılda düşük kaza oranı,1 year
+İstanbul,Beşiktaş,41.043,29.0023,11350,high,Son 1 yılda yüksek kaza oranı,1 year
+Şırnak,Cizre,37.3317,42.1878,400,low,Son 1 yılda düşük kaza oranı,1 year
+Bolu,Merkez,40.735,31.6116,960,low,Son 1 yılda düşük kaza oranı,1 year
+Batman,Merkez,37.8812,41.1351,840,low,Son 1 yılda düşük kaza oranı,1 year
+Denizli,Merkezefendi,37.7765,29.0864,1800,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Balıkesir,Merkez,39.6484,27.8826,2220,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Tekirdağ,Çorlu,41.1592,27.7994,1750,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Eskişehir,Tepebaşı,39.7843,30.5103,1850,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırklareli,Merkez,41.7351,27.2253,540,low,Son 1 yılda düşük kaza oranı,1 year
+Tunceli,Merkez,39.1062,39.5483,420,low,Son 1 yılda düşük kaza oranı,1 year
+Denizli,Pamukkale,37.9299,29.1163,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ordu,Fatsa,41.0289,37.5014,800,low,Son 1 yılda düşük kaza oranı,1 year
+İzmir,Konak,38.4192,27.1287,7200,high,Son 1 yılda yüksek kaza oranı,1 year
+Erzurum,Yakutiye,39.9056,41.2769,1260,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kahramanmaraş,Onikişubat,37.5736,36.9371,2100,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Manisa,Akhisar,38.9217,27.8406,1400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Muğla,Menteşe,37.2153,28.3636,1800,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Şırnak,Merkez,37.5186,42.4544,600,low,Son 1 yılda düşük kaza oranı,1 year
+Bursa,Osmangazi,40.1885,29.061,4500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Hatay,İskenderun,36.5872,36.1731,1640,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırıkkale,Merkez,39.8468,33.5153,720,low,Son 1 yılda düşük kaza oranı,1 year
+Adana,Yüreğir,37.0167,35.3667,2600,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Mersin,Akdeniz,36.8,34.6333,2820,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Konya,Selçuklu,37.8813,32.4846,3500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Siirt,Kurtalan,37.927,41.6844,480,low,Son 1 yılda düşük kaza oranı,1 year
+Sivas,Merkez,39.7477,37.0179,1500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Samsun,Atakum,41.3333,36.2667,1640,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Aksaray,Merkez,38.3687,34.036,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Samsun,İlkadım,41.2867,36.3303,2460,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırşehir,Merkez,39.1458,34.1639,660,low,Son 1 yılda düşük kaza oranı,1 year
+Manisa,Şehzadeler,38.6191,27.4289,2100,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Antalya,Alanya,36.5448,31.9998,2125,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Van,Erciş,39.0303,43.3583,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Aksaray,Ortaca,38.3705,34.0374,800,low,Son 1 yılda düşük kaza oranı,1 year
+Aydın,Nazilli,37.9122,28.321,1280,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ankara,Etimesgut,39.9796,32.6064,6400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kocaeli,Gebze,40.8,29.4333,2500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kütahya,Tavşanlı,39.5429,29.4954,720,low,Son 1 yılda düşük kaza oranı,1 year
+Çanakkale,Biga,40.2281,27.2425,600,low,Son 1 yılda düşük kaza oranı,1 year
+Uşak,Banaz,38.7375,29.7519,600,low,Son 1 yılda düşük kaza oranı,1 year
+Kahramanmaraş,Dulkadiroğlu,37.5833,36.9333,1400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Trabzon,Ortahisar,41.0015,39.7178,1500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Şanlıurfa,Haliliye,37.1606,38.7969,2700,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ordu,Altınordu,40.9839,37.8764,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Bursa,Yıldırım,40.1826,29.106,4500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Diyarbakır,Kayapınar,37.9333,40.1833,1600,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kayseri,Melikgazi,38.7225,35.4875,3000,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ağrı,Merkez,39.7191,43.0503,720,low,Son 1 yılda düşük kaza oranı,1 year
+Elazığ,Merkez,38.68,39.2267,1260,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Osmaniye,Kadirli,37.3731,36.0967,600,low,Son 1 yılda düşük kaza oranı,1 year
+Adana,Seyhan,37.0,35.3213,3900,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Giresun,Merkez,40.9128,38.3895,840,low,Son 1 yılda düşük kaza oranı,1 year
+İstanbul,Kadıköy,40.9923,29.027,8122,high,Son 1 yılda yüksek kaza oranı,1 year
+Malatya,Yeşilyurt,38.3333,38.35,1800,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Batman,Hasankeyf,37.7153,41.4042,560,low,Son 1 yılda düşük kaza oranı,1 year
+Rize,Çayeli,41.0863,40.7386,400,low,Son 1 yılda düşük kaza oranı,1 year
+Malatya,Battalgazi,38.355,38.3303,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Mersin,Tarsus,36.9167,34.9,1880,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ankara,Çankaya,39.9334,32.8597,8960,high,Son 1 yılda yüksek kaza oranı,1 year
+Antalya,Kepez,36.9177,30.7236,2975,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Zonguldak,Ereğli,41.2822,31.4181,640,low,Son 1 yılda düşük kaza oranı,1 year
+Ankara,Kızılay,39.9255,32.8663,10240,high,Son 1 yılda yüksek kaza oranı,1 year
+Konya,Meram,37.8667,32.4833,3500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Mardin,Artuklu,37.3125,40.7353,1500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+İzmir,Karşıyaka,38.455,27.1097,6300,high,Son 1 yılda yüksek kaza oranı,1 year
+Giresun,Bulancak,40.9361,38.2311,560,low,Son 1 yılda düşük kaza oranı,1 year
+Kütahya,Merkez,39.4167,29.9833,1080,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Muğla,Bodrum,37.0344,27.4305,1200,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Gaziantep,Şahinbey,37.0662,37.3833,3600,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Tunceli,Pertek,38.8686,39.3263,280,low,Son 1 yılda düşük kaza oranı,1 year
+Afyonkarahisar,Merkez,38.7638,30.5403,1680,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kayseri,Kocasinan,38.7311,35.4828,2000,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Ağrı,Doğubayazıt,39.5469,44.0833,480,low,Son 1 yılda düşük kaza oranı,1 year
+Rize,Merkez,41.0201,40.5234,600,low,Son 1 yılda düşük kaza oranı,1 year
+Mardin,Kızıltepe,37.1939,40.5842,1000,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Siirt,Merkez,37.9333,41.95,720,low,Son 1 yılda düşük kaza oranı,1 year
+Yalova,Merkez,40.65,29.2667,600,low,Son 1 yılda düşük kaza oranı,1 year
+Trabzon,Akçaabat,41.0211,39.5714,1000,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırşehir,Mucur,39.0622,34.3794,440,low,Son 1 yılda düşük kaza oranı,1 year
+Edirne,Merkez,41.6772,26.5556,1020,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Gaziantep,Şehitkamil,37.0842,37.3786,2400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kocaeli,İzmit,40.7667,29.9167,2500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Antalya,Muratpaşa,36.8857,30.7056,3400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Şanlıurfa,Eyyübiye,37.1411,38.7917,1800,medium,Son 1 yılda orta seviye kaza oranı,1 year
+İzmir,Bornova,38.4592,27.221,4500,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Kırıkkale,Yahşihan,39.8452,33.5064,480,low,Son 1 yılda düşük kaza oranı,1 year
+Eskişehir,Odunpazarı,39.7667,30.5256,1850,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Bolu,Geredé,40.8,32.2,640,low,Son 1 yılda düşük kaza oranı,1 year
+Yalova,Çiftlikköy,40.6825,29.3233,400,low,Son 1 yılda düşük kaza oranı,1 year
+Aydın,Efeler,37.845,27.8396,1920,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Hatay,Antakya,36.2028,36.16,2460,medium,Son 1 yılda orta seviye kaza oranı,1 year
+İstanbul,Eminönü,41.0151,28.9795,12980,high,Son 1 yılda yüksek kaza oranı,1 year
+Afyonkarahisar,Sandıklı,38.4647,30.2693,1120,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Balıkesir,Bandırma,40.3525,27.976,1480,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Niğde,Merkez,37.9667,34.6833,840,low,Son 1 yılda düşük kaza oranı,1 year
+Diyarbakır,Bağlar,37.9136,40.2189,2400,medium,Son 1 yılda orta seviye kaza oranı,1 year
+Sivas,Şarkışla,39.3517,36.4053,1000,medium,Son 1 yılda orta seviye kaza oranı,1 year
