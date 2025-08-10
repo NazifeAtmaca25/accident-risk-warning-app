@@ -13,41 +13,75 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final LocationServices _locationServices=LocationServices();
   GoogleMapController? _mapController;
-  LatLng? _currentPossition;
-  final LatLng _center=const LatLng(37.7765, 29.0864);
-  void _onMapCreated(GoogleMapController controller){
-    _mapController=controller;
-  }
+  LatLng? _currentPosition;
+  bool _isLoading=true;
+  String? _errorMessage;
+
   @override
   void initState() {
     super.initState();
     _initLocation();
   }
   Future<void> _initLocation() async{
-    Position? position=await _locationServices.getCurrentLocation();
-    if(position != null){
-      setState(() {
-        _currentPossition=LatLng(position.latitude, position.longitude);
-      });
-      _mapController?.animateCamera(CameraUpdate.newLatLng(_currentPossition!));
-
-      _locationServices.locationStream.listen((pos) {
+    try{
+      Position? position=await _locationServices.getCurrentLocation(context);
+      if(position != null){
         setState(() {
-          _currentPossition = LatLng(pos.latitude, pos.longitude);
+          _currentPosition=LatLng(position.latitude, position.longitude);
+          _isLoading=false;
         });
-        _mapController?.animateCamera(
-            CameraUpdate.newLatLng(_currentPossition!));
-      });
+        _mapController?.animateCamera(CameraUpdate.newLatLng(_currentPosition!));
+
+        _locationServices.locationStream.listen((pos) {
+          setState(() {
+            _currentPosition = LatLng(pos.latitude, pos.longitude);
+          });
+        });
+      } else{
+        setState(() {
+          _isLoading=false;
+          _errorMessage="Konum alınamadı. Lütfen izinleri kontrol edin.";
+        });
+      }
+    }catch(e){
+setState(() {
+  _isLoading=false;
+  _errorMessage = 'Konum alınırken bir hata oluştu: $e';
+});
     }
+  }
+  Future<void> _refreshLocation() async{
+    setState(() {
+      _isLoading=true;
+      _errorMessage=null;
+    });
+    await _initLocation();
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Kaza Riski Uyarı Sistemi"),
       centerTitle: true,),
-      body: _currentPossition==null?
-      Center(child: CircularProgressIndicator(),):
-      GoogleMap(initialCameraPosition: CameraPosition(target: _currentPossition!,zoom: 15),
+      body: _isLoading?
+      Center(child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircularProgressIndicator(),
+          SizedBox(height: 16,),
+          Text("Konumunuz alınıyor...")
+        ],
+      ),): _errorMessage != null ? Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(padding: EdgeInsets.symmetric(horizontal: 32),child: Text(_errorMessage!,textAlign: TextAlign.center,style: TextStyle(fontSize: 16),),
+            ),
+            SizedBox(height: 24,),
+            ElevatedButton.icon(onPressed: _refreshLocation, label: Text("Tekrar dene"),icon: Icon(Icons.refresh),)
+          ],
+        ),
+      ):
+      GoogleMap(initialCameraPosition: CameraPosition(target: _currentPosition!,zoom: 17),
       myLocationEnabled: true,
       myLocationButtonEnabled: true,
       onMapCreated: (controller){
