@@ -1,0 +1,29 @@
+import 'dart:convert';
+
+import 'package:accident_risk_warning_app/model/danger_zone.dart';
+import 'package:flutter/services.dart';
+import 'package:geolocator/geolocator.dart';
+
+class DangerZoneServices{
+  List<DangerZone> zones=[];
+  Future<void> loadZones() async{
+    final jsonString= await rootBundle.loadString('assets/risk_zones.json');
+    final List<dynamic> jsonData= json.decode(jsonString);
+
+    zones=jsonData.map((item){
+      return DangerZone(name: item["name"], lat: item["lat"], lng: item["lng"], radius: item["radius"].toDouble());
+    }).toList();
+  }
+
+  List<DangerZone> checkProximity(Position userPosition){
+    List<DangerZone> nearbyZones= [];
+    for(var zone in zones){
+      double distance =Geolocator.distanceBetween(userPosition.latitude, userPosition.longitude, zone.lat, zone.lng);
+
+      if(distance <= zone.radius){
+        nearbyZones.add(zone);
+      }
+    }
+    return nearbyZones;
+  }
+}

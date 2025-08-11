@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Tehlikeli B\u00f6lge 1",
+    "lat": 37.7749,
+    "lng": 29.0875,
+    "radius": 300
+  },
+  {
+    "name": "Tehlikeli B\u00f6lge 2",
+    "lat": 37.78,
+    "lng": 29.09,
+    "radius": 200
+  },
+  {
+    "name": "Tehlikeli B\u00f6lge 3",
+    "lat": 37.768,
+    "lng": 29.08,
+    "radius": 250
+  },
+  {
+    "name": "Servergazi Hastanesi",
+    "lat": 37.77697733521033,
+    "lng":29.01899178070657,
+    "radius": 450
+  }
+
+]
