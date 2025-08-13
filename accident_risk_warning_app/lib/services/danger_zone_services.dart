@@ -26,4 +26,18 @@ class DangerZoneServices{
     }
     return nearbyZones;
   }
+
+  List<DangerZone> checkInDangerZone(Position userPosition){
+    return zones.where((zone){
+      double distance=Geolocator.distanceBetween(userPosition.latitude, userPosition.longitude, zone.lat, zone.lng);
+      return distance <= zone.radius;
+    }).toList();
+  }
+
+  List<DangerZone> checkNearbyZones(Position userPositon, {double warningDistance= 150}){
+    return zones.where((zone){
+      double distance=Geolocator.distanceBetween(userPositon.latitude, userPositon.longitude, zone.lat, zone.lng);
+      return distance>zone.radius && distance <=(zone.radius+warningDistance);
+    }).toList();
+  }
 }

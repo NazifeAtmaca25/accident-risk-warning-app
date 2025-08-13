@@ -20,6 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isLoading=true;
   String? _errorMessage;
   Set<String> _alertZones={};
+
+  Map<String,dynamic> _alertInfo={
+    'type':'safe',
+    'message':'Güvenli bölgedesiniz',
+    'zones': <String>{},
+  };
   Set<Marker> _marker={};
   Set<Circle> _circles={};
 
@@ -67,10 +73,10 @@ class _HomeScreenState extends State<HomeScreen> {
         });
       }
     }catch(e){
-setState(() {
-  _isLoading=false;
-  _errorMessage = 'Konum alınırken bir hata oluştu: $e';
-});
+      setState(() {
+        _isLoading=false;
+        _errorMessage = 'Konum alınırken bir hata oluştu: $e';
+      });
     }
   }
 
@@ -96,9 +102,28 @@ setState(() {
   }
 
   void _checkProximityAndAlert(Position pos){
-    final closeZones= _dangerZoneServices.checkProximity(pos);
+    final inDangerZones=_dangerZoneServices.checkInDangerZone(pos);
+    final nearbyZones=_dangerZoneServices.checkNearbyZones(pos);
     setState(() {
-      _alertZones=closeZones.map((z)=>z.name).toSet();
+      if(inDangerZones.isNotEmpty){
+        _alertInfo={
+          'type':'danger',
+          'message':'DİKKAT TEHLİKELİ BÖLGEDESİNİZ!',
+          'zones':inDangerZones.map((z)=>z.name).toSet()
+        };
+      } else if(nearbyZones.isNotEmpty){
+        _alertInfo={
+          'type':"warning",
+          'message':'Dikkat! Tehlikeli bölgeye yaklaşıyorsunuz',
+          'zones':nearbyZones.map((z)=>z.name).toSet()
+        };
+      } else{
+        _alertInfo={
+          'type':'safe',
+          'message':'Güvenli bölgedesiniz',
+          'zones':<String>{}
+        };
+      }
     });
   }
   Future<void> _refreshLocation() async{
@@ -142,7 +167,6 @@ setState(() {
             },
           markers: _marker,
           circles: _circles,),
-          if(_alertZones.isNotEmpty)
             Positioned(
                 bottom: 20,
                 left: 20,
@@ -150,12 +174,35 @@ setState(() {
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 12,horizontal: 16),
                   decoration: BoxDecoration(
-                    color: Colors.redAccent,
-                    borderRadius: BorderRadius.circular(10)
+                    color: _alertInfo['type']=='danger' ?
+                      Colors.redAccent:
+                      _alertInfo['type']=='warning'? Colors.orange:Colors.green,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 10,
+                        offset: Offset(0, 2)
+                      )
+                    ]
                   ),
-                  child: Text("Dikkat! Yakında tehlikeli bölgeler var: ${_alertZones.join(', ')}",
-                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(_alertInfo['message'],
+                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
+                      textAlign: TextAlign.center,),
+                      if((_alertInfo['zones'] as Set<String>).isNotEmpty) ...[
+                        SizedBox(height: 4,),
+                        Text('Bölgeler: ${(_alertInfo['zones'] as Set<String>).join(', ')}',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.9),
+                          fontSize: 14
+                        ),
+                        textAlign: TextAlign.center,)
+                      ]
+                    ],
+                  )
 
                 ))
         ],
