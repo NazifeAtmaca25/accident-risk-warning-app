@@ -15,18 +15,6 @@ class DangerZoneServices{
     }).toList();
   }
 
-  List<DangerZone> checkProximity(Position userPosition){
-    List<DangerZone> nearbyZones= [];
-    for(var zone in zones){
-      double distance =Geolocator.distanceBetween(userPosition.latitude, userPosition.longitude, zone.lat, zone.lng);
-
-      if(distance <= zone.radius){
-        nearbyZones.add(zone);
-      }
-    }
-    return nearbyZones;
-  }
-
   List<DangerZone> checkInDangerZone(Position userPosition){
     return zones.where((zone){
       double distance=Geolocator.distanceBetween(userPosition.latitude, userPosition.longitude, zone.lat, zone.lng);

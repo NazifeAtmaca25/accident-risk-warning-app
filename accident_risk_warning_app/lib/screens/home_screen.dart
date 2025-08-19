@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../services/notification_services.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -19,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
   LatLng? _currentPosition;
   bool _isLoading=true;
   String? _errorMessage;
-  Set<String> _alertZones={};
 
   Map<String,dynamic> _alertInfo={
     'type':'safe',
@@ -111,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
           'message':'DİKKAT TEHLİKELİ BÖLGEDESİNİZ!',
           'zones':inDangerZones.map((z)=>z.name).toSet()
         };
+        NotificationServices().showDangerZoneNotification();
       } else if(nearbyZones.isNotEmpty){
         _alertInfo={
           'type':"warning",

@@ -1,7 +1,10 @@
 import 'package:accident_risk_warning_app/screens/home_screen.dart';
+import 'package:accident_risk_warning_app/services/notification_services.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationServices().initialize();
   runApp(const MyApp());
 }
 
