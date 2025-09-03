@@ -1,4 +1,4 @@
-import 'package:accident_risk_warning_app/screens/home_screens.dart';
+import 'package:accident_risk_warning_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Kaza Risk Uyarı Sistemi',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
       ),
-      home: const HomeScreens(),
+      home: HomeScreen(),
     );
   }
 }
+
